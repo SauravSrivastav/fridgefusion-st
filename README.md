@@ -78,7 +78,7 @@ FridgeFusion is the ultimate solution for anyone looking to make the most of the
 
 ## 📸 App Screenshots
 
-[Insert eye-catching screenshots of your application here]
+[SauravSrivastav/fridgefusion-st/data/1.png]
 
 ## 🤝 Contributing
 
