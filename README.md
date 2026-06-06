@@ -1,106 +1,80 @@
-# FridgeFusion 🍳🥗 - Your Smart Kitchen Assistant
+# FridgeFusion
 
-**FridgeFusion** is an innovative AI-powered app that turns your fridge contents into delicious recipes! 🚀 Say goodbye to food waste and hello to creative cooking with personalized recipe suggestions tailored to your available ingredients and dietary preferences.
+> AI-powered recipe generator that transforms your fridge ingredients into personalized recipes — powered by Google Gemini Vision API and OpenAI.
 
-## 🌟 Overview
-
-FridgeFusion is the ultimate solution for anyone looking to make the most of their kitchen inventory. Whether you're a seasoned chef 👨‍🍳 or a cooking novice 🍽️, our application provides customized recipe recommendations based on what's in your fridge. Leveraging cutting-edge AI technology, FridgeFusion delivers accurate, actionable recipes that help you create tasty meals while reducing food waste. 🌿♻️
-
-## 🔥 Key Features
-
-- 📸 **Image-Based Ingredient Recognition**: Upload fridge photos for instant ingredient identification
-- 🍽️ **Customized Recipe Generation**: Get personalized recipes based on your available ingredients
-- 🍣 **Multiple Recipe Options**: Choose from various recipe suggestions
-- 🥕 **Dietary Preference Support**: Tailor recipes to your specific dietary needs or restrictions
-- 📄 **PDF Recipe Download**: Save generated recipes as PDFs for offline use
-- 🖥️ **User-Friendly Interface**: Navigate effortlessly with our intuitive, step-by-step process
-
-## 🛠️ Setup Instructions
-
-### Prerequisites
-
-- Python 3.8+ 🐍
-- Streamlit 🌟
-- Pillow (PIL) 🖼️
-- python-dotenv 🔐
-- google-generativeai 🧠
-- fpdf 📄
-
-### Installation
-
-1. **Clone the repository:**
-    ```bash
-    git clone https://github.com/SauravSrivastav/fridgefusion-st.git
-    cd fridgefusion-st
-    ```
-
-2. **Create and Activate a Virtual Environment:**
-    - Windows:
-      ```bash
-      python -m venv venv
-      venv\Scripts\activate
-      ```
-    - macOS/Linux:
-      ```bash
-      python3 -m venv venv
-      source venv/bin/activate
-      ```
-
-3. **Install required packages:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. **Set up Google Generative AI (Gemini) API key:**
-    - Get your API key from [Google AI Studio](https://aistudio.google.com/app/apikey)
-    - Create a `.env` file in the project root:
-      ```env
-      GEMINI_API_KEY=your_api_key_here
-      ```
-
-5. **Launch the app:**
-    ```bash
-    streamlit run app.py
-    ```
-
-6. **Deactivate Virtual Environment (When Done):**
-    ```bash
-    deactivate
-    ```
-
-## 🚀 How to Use FridgeFusion
-
-1. 📸 Upload fridge images or snap photos with your device
-2. 📝 Review and edit the AI-identified ingredients
-3. 🍽️ Select dietary preferences and number of recipes
-4. 👨‍🍳 Generate personalized recipes from your ingredients
-5. 💾 Download recipes as PDF or view in-app
-
-## 📸 App Screenshots
-
-![Search Results](https://github.com/SauravSrivastav/fridgefusion-st/blob/main/data/1.png)
-
-## 🤝 Contributing
-
-We welcome contributions! 🎉 To improve FridgeFusion:
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-For major changes, please open an issue first to discuss your ideas.
-
-## 📜 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📞 Contact Us
-
-Have questions or suggestions? Reach out to us:
-
-- 📧 Email: [Sauravsrivastav2205@gmail.com](mailto:Sauravsrivastav2205@gmail.com)
-- 💼 LinkedIn: [in/sauravsrivastav2205](https://www.linkedin.com/in/sauravsrivastav2205)
-- 🐙 GitHub: [https://github.com/SauravSrivastav](https://github.com/SauravSrivastav)
+[![Python](https://img.shields.io/badge/Python-3.9+-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
+[![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?style=flat-square&logo=streamlit&logoColor=white)](https://streamlit.io)
+[![Gemini](https://img.shields.io/badge/Google_Gemini-API-4285F4?style=flat-square&logo=google&logoColor=white)](https://ai.google.dev)
+[![Stars](https://img.shields.io/github/stars/SauravSrivastav/fridgefusion-st?style=flat-square)](https://github.com/SauravSrivastav/fridgefusion-st)
 
 ---
+
+## Overview
+
+FridgeFusion solves the daily problem of "what should I cook?" by using **AI image recognition** to identify ingredients from a photo of your fridge and generate creative, personalized recipes — instantly.
+
+Built with **Streamlit** for the UI, **Google Gemini Vision** for image analysis, and **OpenAI** for recipe generation.
+
+---
+
+## Features
+
+- **Ingredient Recognition** — Upload a fridge photo, AI identifies all ingredients automatically
+- **Personalized Recipes** — Recipes tailored to your dietary preferences and available items
+- **Nutritional Info** — Calorie count and macro breakdown for each recipe
+- **Waste Reduction** — Uses what you already have, minimizes food waste
+- **Multi-Cuisine** — Suggests recipes across cuisines based on ingredients
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Frontend | Streamlit |
+| AI Vision | Google Gemini Vision API |
+| Recipe Gen | OpenAI GPT |
+| Language | Python 3.9+ |
+| Deployment | Streamlit Cloud / Azure |
+
+---
+
+## Quick Start
+
+```bash
+git clone https://github.com/SauravSrivastav/fridgefusion-st.git
+cd fridgefusion-st
+pip install -r requirements.txt
+
+# Add your API keys to .env
+echo "GEMINI_API_KEY=your_key" >> .env
+echo "OPENAI_API_KEY=your_key" >> .env
+
+streamlit run app.py
+```
+
+---
+
+## Project Structure
+
+```
+fridgefusion-st/
+├── app.py              # Main Streamlit application
+├── openai.py           # OpenAI recipe generation module
+├── requirements.txt    # Dependencies
+├── data/               # Sample data and test images
+└── .env                # API keys (not committed)
+```
+
+---
+
+## Built By
+
+**Saurav Srivastav** — Cloud & DevSecOps Leader | Azure · MLOps · LLMOps | Dubai, UAE
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/sauravsrivastav2205/)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Visit-0078D4?style=flat-square&logo=vercel)](https://saurav-srivastav-portfolio.vercel.app)
+
+---
+
+<sub>Streamlit · Gemini API · OpenAI · Python · AI · Generative AI · Recipe Generator · Computer Vision · LLM · Azure AI</sub>
